@@ -12,8 +12,7 @@ export async function POST(req) {
   const digit = angka.toString().split("");
   let output = "";
   for (let i = 0; i < digit.length; i++) {
-    const current = digit[i];
-    const baris = current.padEnd(i + 1, "0");
+    const baris = digit[i] + "0".repeat(i + 1);
     output += baris + "\n";
   }
 
